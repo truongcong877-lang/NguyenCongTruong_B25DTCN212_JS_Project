@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quản Lý Tài Chính Cá Nhân</title>
+    <link rel="stylesheet" href="/assets/fonts/font.css" />
+    <link rel="stylesheet" href="/CSS/index.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="header">
+          <div>📒 Tài Chính Cá Nhân K25_Rikkei</div>
+          <div>Tài khoản <img src="/assets/icons/Vector.png" alt="" /></div>
+        </div>
+      </header>
+
+      <div class="banner">
+        <h3>🎯 Kiểm soát chi tiêu thông minh</h3>
+        <p>Theo dõi ngân sách và thu chi hàng tháng dễ dàng</p>
+      </div>
+
+      <h1>📊 Quản Lý Tài Chính Cá Nhân</h1>
+
+      <div class="container">
+        <div class="card">
+          <label style="color: #6b7280">📅 Chọn tháng:</label>
+          <input type="month" />
+        </div>
+
+        <div class="card">
+          <label style="color: #6b7280">💰 Ngân sách tháng:</label>
+          <input type="text" placeholder="VD: 5000000" />
+          <button class="card-btn">Lưu</button>
+        </div>
+
+        <div class="card">
+          <p style="color: #6b7280">Số tiền còn lại</p>
+          <p style="color: #22c55e; font-size: 24px">0 VND</p>
+        </div>
+
+        <section class="category-card">
+          <h3 class="category-title">💼 Quản lý danh mục (theo tháng)</h3>
+
+          <div class="category-form">
+            <input type="text" placeholder="Tên danh mục" />
+            <input type="text" placeholder="Giới hạn (VND)" />
+            <button>Thêm danh mục</button>
+          </div>
+
+          <ul class="category-list">
+            <li class="category-item">
+              <div>
+                <div class="category-name">Tiền ăn</div>
+                <div class="category-limit">Giới hạn: 1,000,000 VND</div>
+              </div>
+              <div class="category-actions">
+                <button class="btn-category">Sửa</button>
+                <button class="btn-category">Xóa</button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="transactionCard">
+          <input type="text" class="amountInput" placeholder="Số tiền" />
+          <input
+            type="text"
+            class="categoryInput"
+            placeholder="Tiền chi tiêu"
+          />
+          <input type="text" class="noteInput" placeholder="Ghi chú" />
+          <button class="addTransactionBtn">Thêm</button>
+        </div>
+
+        <div class="historyCard">
+          <h3 class="historyTitle">📜 Lịch sử giao dịch</h3>
+
+          <div class="historyControl">
+            <div class="searchBox">
+              <input
+                type="text"
+                class="searchInput"
+                placeholder="tìm nội dung"
+              />
+              <button class="searchBtn">🔍</button>
+            </div>
+            <button class="sortBtn">Sắp xếp theo giá</button>
+          </div>
+
+          <ul class="historyList">
+            <li>
+              <span>tiền phòng - đóng tiền phòng tháng 3: 2,000,000 VND</span>
+              <button class="deleteBtn">Xóa</button>
+            </li>
+            <li>
+              <span>tiền xăng xe - đổ xăng 21/3: 100,000 VND</span>
+              <button class="deleteBtn">Xóa</button>
+            </li>
+            <li>
+              <span>tiền ăn - trà sữa: 30,000 VND</span>
+              <button class="deleteBtn">Xóa</button>
+            </li>
+          </ul>
+
+          <div class="pagination">
+            <button class="pageBtn">Previous</button>
+            <button class="pageBtn">1</button>
+            <button class="pageBtn">2</button>
+            <button class="pageBtn">3</button>
+            <button class="pageBtn">Next</button>
+          </div>
+        </div>
+
+        <div class="alertBox">
+          Danh mục "tiền ăn " đã vượt giới hạn: 1,060,000 / 1,000,000 VND
+        </div>
+
+        <div class="statCard">
+          <h3>📊 Thống kê chi tiêu</h3>
+          <table class="statTable">
+            <tr>
+              <th>Tháng</th>
+              <th>Chi tiêu</th>
+              <th>Ngân sách</th>
+              <th>Trạng thái</th>
+            </tr>
+            <tr>
+              <td>2025-03</td>
+              <td>2,150,000</td>
+              <td>5,000,000</td>
+              <td class="successStatus">Đạt</td>
+            </tr>
+            <tr>
+              <td>2025-04</td>
+              <td>3,100,000</td>
+              <td>3,000,000</td>
+              <td class="errorStatus">Vượt</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>© 2026 Quản Lý Tài Chính Cá Nhân by Nguyễn Công Trường</p>
+      </footer>
+    </div>
+  </body>
+</html>
