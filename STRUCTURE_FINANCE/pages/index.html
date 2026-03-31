@@ -48,18 +48,7 @@
             <button>Thêm danh mục</button>
           </div>
 
-          <ul class="category-list">
-            <li class="category-item">
-              <div>
-                <div class="category-name">Tiền ăn</div>
-                <div class="category-limit">Giới hạn: 1,000,000 VND</div>
-              </div>
-              <div class="category-actions">
-                <button class="btn-category">Sửa</button>
-                <button class="btn-category">Xóa</button>
-              </div>
-            </li>
-          </ul>
+          <ul class="category-list"></ul>
         </section>
 
         <div class="transactionCard">
@@ -67,7 +56,7 @@
           <input
             type="text"
             class="categoryInput"
-            placeholder="Tiền chi tiêu"
+            placeholder="Tên danh mục (ăn uống, xăng...)"
           />
           <input type="text" class="noteInput" placeholder="Ghi chú" />
           <button class="addTransactionBtn">Thêm</button>
@@ -78,30 +67,13 @@
 
           <div class="historyControl">
             <div class="searchBox">
-              <input
-                type="text"
-                class="searchInput"
-                placeholder="tìm nội dung"
-              />
+              <input type="text" class="searchInput" placeholder="nội dung" />
               <button class="searchBtn">🔍</button>
             </div>
             <button class="sortBtn">Sắp xếp theo giá</button>
           </div>
 
-          <ul class="historyList">
-            <li>
-              <span>tiền phòng - đóng tiền phòng tháng 3: 2,000,000 VND</span>
-              <button class="deleteBtn">Xóa</button>
-            </li>
-            <li>
-              <span>tiền xăng xe - đổ xăng 21/3: 100,000 VND</span>
-              <button class="deleteBtn">Xóa</button>
-            </li>
-            <li>
-              <span>tiền ăn - trà sữa: 30,000 VND</span>
-              <button class="deleteBtn">Xóa</button>
-            </li>
-          </ul>
+          <ul class="historyList"></ul>
 
           <div class="pagination">
             <button class="pageBtn">Previous</button>
@@ -112,9 +84,7 @@
           </div>
         </div>
 
-        <div class="alertBox">
-          Danh mục "tiền ăn " đã vượt giới hạn: 1,060,000 / 1,000,000 VND
-        </div>
+        <div class="alertBox" style="display: none"></div>
 
         <div class="statCard">
           <h3>📊 Thống kê chi tiêu</h3>
@@ -131,12 +101,6 @@
               <td>5,000,000</td>
               <td class="successStatus">Đạt</td>
             </tr>
-            <tr>
-              <td>2025-04</td>
-              <td>3,100,000</td>
-              <td>3,000,000</td>
-              <td class="errorStatus">Vượt</td>
-            </tr>
           </table>
         </div>
       </div>
@@ -145,5 +109,7 @@
         <p>© 2026 Quản Lý Tài Chính Cá Nhân by Nguyễn Công Trường</p>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/JS/index.js"></script>
   </body>
 </html>
