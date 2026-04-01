@@ -234,6 +234,39 @@ const checkLimit = () => {
   }
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  const accountWrapper = document.getElementById("accountWrapper");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  accountWrapper.addEventListener("click", (e) => {
+    e.stopPropagation(); 
+    dropdownMenu.classList.toggle("show");
+  });
+
+  document.addEventListener("click", () => {
+    dropdownMenu.classList.remove("show");
+  });
+
+  logoutBtn.addEventListener("click", () => {
+    Swal.fire({
+      title: "Bạn có chắc chắn?",
+      text: "Bạn sẽ được đăng xuất khỏi hệ thống!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Đồng ý",
+      cancelButtonText: "Hủy"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("userLogin"); 
+        window.location.href = "login.html"; 
+      }
+    });
+  });
+});
+
 renderCategories();
 renderTransactions();
 updateRemaining();
