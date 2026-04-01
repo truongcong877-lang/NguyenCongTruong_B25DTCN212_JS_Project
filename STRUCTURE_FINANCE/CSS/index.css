@@ -8,7 +8,15 @@
     background-color: #f3f4f6;
 }
 
-    .header{
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Đảm bảo header luôn nằm trên các phần tử khác */
+  background-color: #ffffff; /* Thêm màu nền để không bị xuyên thấu khi cuộn */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng cho đẹp khi cuộn */
+}
+
+.header{
         background:#4338CA;
         color:white;
         padding:18px 128px;
@@ -16,16 +24,14 @@
         justify-content:space-between;
     }
 
-    /* Định vị cho wrapper */
 .account-wrapper {
   position: relative;
   cursor: pointer;
   user-select: none;
 }
 
-/* Style cho menu dropdown */
 .dropdown-menu {
-  display: none; /* Mặc định ẩn */
+  display: none;
   position: absolute;
   top: 110%;
   right: 0;
@@ -37,12 +43,10 @@
   overflow: hidden;
 }
 
-/* Hiển thị khi có class 'show' */
 .dropdown-menu.show {
   display: block;
 }
 
-/* Style nút đăng xuất */
 #logoutBtn {
   width: 100%;
   padding: 10px 15px;
@@ -50,7 +54,7 @@
   background: none;
   text-align: left;
   font-size: 14px;
-  color: #ef4444; /* Màu đỏ cho nút đăng xuất */
+  color: #ef4444; 
   cursor: pointer;
   transition: background 0.2s;
 }
