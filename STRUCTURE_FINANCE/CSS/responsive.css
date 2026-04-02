@@ -1,0 +1,65 @@
+@media (max-width: 1024px) {
+    .header { padding: 18px 40px; }
+    .banner, .container { width: 85%; }
+}
+
+@media (max-width: 768px) {
+    .header { 
+        padding: 15px 20px; 
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .banner, .container { 
+        width: 95%; 
+    }
+
+    .category-form, .transactionCard {
+        flex-direction: row; 
+        flex-wrap: nowrap; 
+        gap: 8px;
+    }
+
+    .category-form input, 
+    .transactionCard input, 
+    .transactionCard select {
+        flex: 1;
+        min-width: 0;
+        padding: 8px 5px;
+    }
+
+    .addTransactionBtn, .category-form button {
+        white-space: nowrap; 
+        padding: 8px 12px;
+        width: auto;
+    }
+
+    .historyControl {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .searchBox {
+        width: 60%; 
+    }
+
+    .sortBtn {
+        width: 35%;
+        font-size: 13px;
+    }
+
+    .statCard { 
+        overflow-x: auto; 
+    }
+    
+    .statTable { 
+        min-width: 500px; 
+    }
+
+    .category-item, .historyList li {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
