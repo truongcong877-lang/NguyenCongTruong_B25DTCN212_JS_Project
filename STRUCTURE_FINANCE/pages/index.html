@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quản Lý Tài Chính Cá Nhân</title>
+    <link rel="stylesheet" href="/assets/fonts/font.css" />
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="stylesheet" href="/CSS/responsive.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="header">
+          <div>📒 Tài Chính Cá Nhân K25_Rikkei</div>
+          <div class="account-wrapper" id="accountWrapper">
+            <div class="account-info">
+              Tài khoản <img src="/assets/icons/Vector.png" alt="" />
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <button id="logoutBtn" style="color: #ef4444">
+                🚪 Đăng xuất
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="banner">
+        <h3>🎯 Kiểm soát chi tiêu thông minh</h3>
+        <p>Theo dõi ngân sách và thu chi hàng tháng dễ dàng</p>
+      </div>
+
+      <h1>📊 Quản Lý Tài Chính Cá Nhân</h1>
+
+      <div class="container">
+        <div class="card">
+          <label style="color: #6b7280">📅 Chọn tháng:</label>
+          <input type="month" />
+        </div>
+
+        <div class="card">
+          <label style="color: #6b7280">💰 Ngân sách tháng:</label>
+          <input type="text" placeholder="VD: 5000000" />
+          <button class="card-btn">Lưu</button>
+        </div>
+
+        <div class="card">
+          <p style="color: #6b7280">Số tiền còn lại</p>
+          <p style="color: #22c55e; font-size: 24px">0 VND</p>
+        </div>
+
+        <section class="category-card">
+          <h3 class="category-title">💼 Quản lý danh mục (theo tháng)</h3>
+
+          <div class="category-form">
+            <input
+              type="text"
+              class="category-name-input"
+              placeholder="Tên danh mục"
+            />
+            <input
+              type="text"
+              class="category-limit-input"
+              placeholder="Giới hạn (VND)"
+            />
+            <button>Thêm danh mục</button>
+          </div>
+
+          <ul class="category-list"></ul>
+        </section>
+
+        <div class="transactionCard">
+          <input
+            type="number"
+            class="amountInput"
+            placeholder="Số tiền (VND)"
+            autocomplete="off"
+          />
+          <select class="categoryInput">
+            <option value="">-- Chọn danh mục --</option>
+          </select>
+
+          <input
+            type="text"
+            class="noteInput"
+            placeholder="Ghi chú (ăn sáng, đổ xăng...)"
+            autocomplete="off"
+          />
+          <button class="addTransactionBtn">Thêm</button>
+        </div>
+
+        <div class="historyCard">
+          <h3 class="historyTitle">📜 Lịch sử giao dịch</h3>
+
+          <div class="historyControl">
+            <div class="searchBox">
+              <input type="text" class="searchInput" placeholder="nội dung" />
+              <button class="searchBtn">🔍</button>
+            </div>
+            <button class="sortBtn">Sắp xếp theo giá</button>
+          </div>
+
+          <ul class="historyList"></ul>
+
+          <div class="pagination"></div>
+        </div>
+
+        <div class="alertBox" style="display: none"></div>
+
+        <div class="statCard">
+          <h3>📊 Thống kê chi tiêu</h3>
+          <table class="statTable">
+            <tr>
+              <th>Tháng</th>
+              <th>Chi tiêu</th>
+              <th>Ngân sách</th>
+              <th>Trạng thái</th>
+            </tr>
+            <tr>
+              <td>2025-03</td>
+              <td>2,150,000</td>
+              <td>5,000,000</td>
+              <td class="successStatus">&check; Đạt</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>© 2026 Quản Lý Tài Chính Cá Nhân. by Nguyễn Công Trường</p>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/JS/index.js"></script>
+  </body>
+</html>
