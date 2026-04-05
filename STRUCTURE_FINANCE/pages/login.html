@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập tài khoản</title>
+    <link rel="stylesheet" href="/CSS/login.css" />
+  </head>
+  <body>
+    <form class="form-register">
+      <h2>🔐 Đăng nhập</h2>
+      <input type="text" placeholder="Email" />
+      <div class="input-password-wrapper">
+        <input type="password" placeholder="Mật khẩu" id="loginPassword" />
+        <span
+          class="toggle-password"
+          onclick="togglePassword('loginPassword', this)"
+        >
+          <!-- icon mắt mở -->
+          <svg
+            class="icon-eye"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+          <!-- icon mắt gạch -->
+          <svg
+            class="icon-eye-off"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="display: none"
+          >
+            <path
+              d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"
+            />
+            <path
+              d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"
+            />
+            <line x1="1" y1="1" x2="23" y2="23" />
+          </svg>
+        </span>
+      </div>
+      <button type="submit" class="btn-login">Đăng nhập</button>
+      <div class="footer">
+        <p>Chưa có tài khoản ? <a href="./register.html">Đăng ký ngay</a></p>
+      </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/JS/login.js"></script>
+    <script>
+      function togglePassword(inputId, iconEl) {
+        var input = document.getElementById(inputId);
+        var eyeOpen = iconEl.querySelector(".icon-eye");
+        var eyeOff = iconEl.querySelector(".icon-eye-off");
+
+        if (input.type === "password") {
+          input.type = "text";
+          eyeOpen.style.display = "none";
+          eyeOff.style.display = "block";
+        } else {
+          input.type = "password";
+          eyeOpen.style.display = "block";
+          eyeOff.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
